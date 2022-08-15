@@ -1,0 +1,197 @@
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20220815174305)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220815174305_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220815174305"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-15 17:43:29.100375"], ["updated_at", "2022-08-15 17:43:29.100375"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-08-16 02:49:09 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/naokikobayashi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 2607ms (Views: 2588.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 02:51:05 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 02:56:51 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 02:57:19 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:02:30 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/naokikobayashi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 243ms (Views: 233.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/recipes" for ::1 at 2022-08-16 03:02:39 +0900
+Processing by RecipesController#create as JS
+  Parameters: {"utf8"=>"✓", "recipe"=>{"title"=>"あああ", "body"=>"いいい"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[36mRecipe Create (1.3ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "あああ"], ["body", "いいい"], ["created_at", "2022-08-15 18:02:39.144306"], ["updated_at", "2022-08-15 18:02:39.144306"]]
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  Rendering recipes/create.js.erb
+  Rendered recipes/create.js.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:07:10 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (46.6ms)
+  Rendered recipes/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for ::1 at 2022-08-16 03:07:40 +0900
+Processing by RecipesController#create as JS
+  Parameters: {"utf8"=>"✓", "recipe"=>{"title"=>"aaa", "body"=>"bbb"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aaa"], ["body", "bbb"], ["created_at", "2022-08-15 18:07:40.610386"], ["updated_at", "2022-08-15 18:07:40.610386"]]
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  Rendering recipes/create.js.erb
+  Rendered recipes/create.js.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:07:42 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.5ms)
+  Rendered recipes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for ::1 at 2022-08-16 03:08:07 +0900
+Processing by RecipesController#create as JS
+  Parameters: {"utf8"=>"✓", "recipe"=>{"title"=>"ああああ", "body"=>"あああああ"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ああああ"], ["body", "あああああ"], ["created_at", "2022-08-15 18:08:07.121438"], ["updated_at", "2022-08-15 18:08:07.121438"]]
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  Rendering recipes/create.js.erb
+  Rendered recipes/create.js.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 5.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:08:09 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.0ms)
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:09:03 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:09:03 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:11:35 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2022-08-16 03:16:16 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/naokikobayashi/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (4.4ms)
+  Rendered recipes/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 333ms (Views: 323.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/recipes" for ::1 at 2022-08-16 03:16:26 +0900
+Processing by RecipesController#create as JS
+  Parameters: {"utf8"=>"✓", "recipe"=>{"title"=>"おおお", "body"=>"えてｗた"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "おおお"], ["body", "えてｗた"], ["created_at", "2022-08-15 18:16:26.016318"], ["updated_at", "2022-08-15 18:16:26.016318"]]
+  ↳ app/controllers/recipes_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:8
+  Rendering recipes/create.js.erb
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/_recipes.html.erb:1
+  Rendered recipes/_recipes.html.erb (2.2ms)
+  Rendered recipes/create.js.erb (7.2ms)
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 1.8ms)
+
+
